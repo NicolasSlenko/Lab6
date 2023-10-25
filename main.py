@@ -14,6 +14,14 @@ def encode(password):
                 result += '2'
     return result
 
+def decode(password):
+    result = ""
+    for i in password:
+        i = int(i)
+        if i <= 3:
+            print("we tried")
+    return result
+
 
 def main():
     encoded = None
@@ -25,7 +33,8 @@ def main():
             print("Your output has been encoded and stored!")
             print(encoded)
         elif userInput == '2':
-            pass
+            decoded = decode(encoded)
+            print("The encoded password is " + encoded + " and the original password is " + decoded + ".")
         elif userInput == '3':
             break
 
